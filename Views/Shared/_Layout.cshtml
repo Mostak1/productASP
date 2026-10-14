@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-50">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - productASP</title>
+    <link rel="stylesheet" href="~/css/tailwind.css" asp-append-version="true" />
+</head>
+<body class="flex flex-col min-h-screen text-gray-800 antialiased">
+    <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-8">
+                    <a class="text-xl font-bold text-blue-600 hover:text-blue-700 tracking-tight" asp-area="" asp-controller="Home" asp-action="Index">
+                        productASP
+                    </a>
+                    <div class="sm:flex space-x-4">
+                        <a class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-4 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            &copy; 2026 - productASP - <a class="text-blue-600 hover:underline" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
